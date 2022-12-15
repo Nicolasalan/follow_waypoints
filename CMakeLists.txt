@@ -9,22 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   smach
   std_msgs
-  message_generation
-  roscpp
-  tf
 )
-
-add_service_files(
-   DIRECTORY 
-   srv
-   FILES
-   save_point.srv
-)
-
-generate_messages(
-    DEPENDENCIES
-    std_msgs
-  )
 
 catkin_python_setup()
 
@@ -42,4 +27,3 @@ catkin_install_python(
 install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )
-
